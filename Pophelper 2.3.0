@@ -28,8 +28,27 @@ The individuals can be sorted based on the value of any one of the clusters (‘
 #imgtype. Normally I save the output as the pdf file. 
 
 Notes(tricky part):
-1. how to group the samples within the group together? 
-The meanQ file does not contain the sample name information, which is also the reason you need the 
-The sample name for each row align with the sample order when you conduct the SNP calling. You should create a file with the ID, sample name and the group information like the example file Populations.csv.
-You can combine this information with the meanQ file in the excel and create a new file. 
+How to group the individuals within the group together? 
+The meanQ file does not contain the individual name information, which is also the reason you need the barcode_ID_info. 
+Additionally, if you also know the group information for each individual, like in rice, you know the sample is wild rice, weedy rice, cultivated rice, 
+and you want to put all the indivdiduals from the same group together in the figure, you need to reform the input file meanQ for analysis. 
+
+1. Prepare the individual information file (as barcode_ID_infor) plus the group information (e.g. population.csv).
+2. Combine the individual information file with the meanQ file using excel and make sure the same number and order of individuals (e.g. meanQ_5_original_order.csv).
+3. Run the R scripts to reorder the individuals 
+
+#sort the samples with specific group order
+p5_ori<-read.csv('meanQ_5_original_order.csv')
+group_order<-c('Wild rice', 'US weedy rice-SH', 'US weedy rice-BHA','South Asian weedy rice', 'SE Asian weedy rice','NE Asian weedy rice','Colombian weedy rice', 'indica','aus','japonica','admixed cultivar','Colombian landraces','Colombian commercial rice')
+p5_reorder<-p5_ori[order(sapply(p5_ori$Group, function(x) which(x==group_order))),]
+write.csv(p5_reorder,'meanQ5_re_order.csv')
+
+4. Remove the Group and individual columes using R or excel.
+5. Create the group labels using R. The order of the group information must align to the order of the individuals in the meanQ.
+
+labels_final<-read.csv('meanQ5_re_order.csv',stringsAsFactors = F)
+sapply(labels_final, is.character)
+g_labels_final<-labels_final[,8,drop=FALSE]
+
+
 
