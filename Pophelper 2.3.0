@@ -14,7 +14,6 @@ The next step is to set the working directory. The working directory is a folder
 (this protocol is specifically for the analysis of fastSTRUCTURE)
 The input file for fastSTRUCTURE should be the meanQ file. meanQ file is the file with contribution of each cluster for each sample. 
 The sample name for each row align with the sample order when you conduct the SNP calling. You should create a file with the sample name and the group information. 
-You can add the 
 
 
 
