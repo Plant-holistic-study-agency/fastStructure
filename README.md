@@ -7,6 +7,7 @@ First, you will need a filtered vcf file.
 
 You will also need a text file listing all of the chromosomes (you can call it chrom-map.txt).
 Here is an example of what it should look like:
+
 SL3.0ch01	01
 
 SL3.0ch02	02
