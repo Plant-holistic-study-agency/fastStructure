@@ -24,6 +24,11 @@ Then you will use vcftools to output files in plink format. You will need .ped a
 Example command:
 $ vcftools --vcf sc-sg-spm20mac2.recode.vcf --out sc-sg-spm20mac2 --chrom-map chrom-map.txt --plink
 
+Next convert .ped files to .bed format
+Ex:
+$ plink --file sc-sg-spm20mac2 --make-bed --noweb --out plink_sc-sg-spm_20mac2
+#check that the .ped and .bed,.bim,.fam files were created
+
 
 Files in this repository:
 -
