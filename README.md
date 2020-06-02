@@ -9,10 +9,12 @@ You will also need a text file listing all of the chromosomes (you can call it c
 
 Then you will use vcftools to output files in plink format. You will need .ped and .map files going forward
 Example command:
+
 $ vcftools --vcf sc-sg-spm20mac2.recode.vcf --out sc-sg-spm20mac2 --chrom-map chrom-map.txt --plink
 
-Next convert .ped files to .bed format
+Next convert .ped files to .bed format.
 Ex:
+
 $ plink --file sc-sg-spm20mac2 --make-bed --noweb --out plink_sc-sg-spm_20mac2
 
 Once you have the .ped and .bed,.bim,.fam files created, you can run the fstruc.sh script (see separate file of that name in the repository). 
@@ -22,7 +24,7 @@ $ bsub < fstruc.sh
 
 Submitting to the short queue is fine as this should only take a few minutes.
 
-Then run the choosek.py script
+Then run the choosek.py script.
 Ex:
 
 $ python /share/pkg/fastStructure/v1.0-4-ge47212f/chooseK.py --input=20190102_sc-sg-spm20mac2 
