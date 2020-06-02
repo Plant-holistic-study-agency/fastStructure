@@ -1,7 +1,7 @@
 Pophelper 2.3.0 is a R package that can be used to plot the struture figure. 
 The detailed tutorials could be found in: http://www.royfrancis.com/pophelper/articles/index.html
 
-**Installation**
+*Installation
 #install the packages 
 install.packages(c("devtools","ggplot2","gridExtra","gtable","label.switching","tidyr"),dependencies=T)
 install.packages('pophelper')
