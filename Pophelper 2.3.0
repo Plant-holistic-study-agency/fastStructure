@@ -11,3 +11,8 @@ library(pophelper)
 The next step is to set the working directory. The working directory is a folder that usually contains the run files of interest so as to allow R to access it. 
 
 *Input files 
+(this protocol is specifically for the analysis of fastSTRUCTURE)
+The input file for fastSTRUCTURE should be the meanQ file. Use the readQ in Pophelper to read the data into R and covert to a 'qlist' filetype.
+
+use 'attributes' to check the facts of the data, like number of individual, the number of k. 
+
