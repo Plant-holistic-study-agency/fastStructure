@@ -1,7 +1,7 @@
 # fastStructure
 A collection of files for running fastStructure on population genetic data.
 
-Intstructions:
+# Instructions:
 
 First, you will need a filtered vcf file.
 
@@ -29,7 +29,7 @@ Copy the .meanQ, .bed, .bim, and .fam files to your local machine, and use R to 
 
 
 
-Files in this repository:
+# Files in this repository:
 
 chrom-map.txt
 
