@@ -28,6 +28,8 @@ and
 barcodes_plink_order.txt
 
 
+Pophelper is the package to plot the result of the fastSTRUCTURE. The input file is the meanQ file from fastSTRUCTURE. The individual information and group information are also important. 
+
 
 # Files in this repository:
 
@@ -38,3 +40,9 @@ fstruc.sh
 barcode_ID_info.txt
 
 barcodes_plink_order.txt
+
+Populations.csv
+
+meanQ_5_original_order.csv
+
+meanQ5_re_order.csv
