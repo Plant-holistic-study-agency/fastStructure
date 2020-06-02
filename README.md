@@ -21,7 +21,7 @@ $ python /share/pkg/fastStructure/v1.0-4-ge47212f/chooseK.py --input=20190102_sc
 
 Copy the .meanQ, .bed, .bim, and .fam files to your local machine, and use R to plot the meanQ files. 
 
-In order to keep the sample ID numbers straight and to add info to your plot based on barcode ID, you may need additional text files to keep these things straight. 
+In order to keep the sample ID numbers straight and to add info to your plot based on barcode ID, you may need to create your own additional text files to keep these things straight. Look back into the original vcf file to find the order in which your samples were listed, and use that to make a simple text files with the "plink order" that your samples should be listed in the meanQ files. 
 Examples are provided with the files:
 barcode_ID_info.txt
 and
