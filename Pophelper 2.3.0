@@ -9,3 +9,5 @@ install.packages('pophelper')
 library(pophelper)
 
 The next step is to set the working directory. The working directory is a folder that usually contains the run files of interest so as to allow R to access it. 
+
+*Input files 
