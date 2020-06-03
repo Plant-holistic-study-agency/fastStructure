@@ -12,16 +12,18 @@ The next step is to set the working directory. The working directory is a folder
 2. Input files 
 (this protocol is specifically for the analysis of fastSTRUCTURE)
 The input file for fastSTRUCTURE should be the meanQ file. meanQ file is the file with contribution of each cluster for each sample. 
-pop_k_5_reoder<-readQ('meanQ_5.csv')
+Note: the meanQ file you are using should be the one with the most likely value of K based on the chooseK.py results. 
+(So depending on your data, you may have a different number than 5 for your K value).
+
+pop_k_5_reorder<-readQ('meanQ_5.csv')
 #use the 'readQ' in Pophelper to read the data into R and covert to a 'qlist' filetype.
-attributes(pop_k_5_reoder[[1]])
+attributes(pop_k_5_reorder[[1]])
 #use the 'attributes' to check the facts of the data, like number of individual, the number of k. 
 
 3.Plot the figures 
-plotQ(pop_k_5_reoder[1],grplab = g_labels_reorder, sortind='all', clustercol=c("coral","steelblue","lightblue","purple","orange"), imgtype = 'pdf')
+plotQ(pop_k_5_reorder[1], sortind='all', clustercol=c("coral","steelblue","lightblue","purple","orange"), imgtype = 'pdf')
 
 #pop_k_5_reorder is the qlist
-#grplab is the labels for the group name
 #sortind. Individuals in a plot are by default plotted in the order as in the input data. 
 The individuals can be sorted based on the value of any one of the clusters (‘Cluster1’), ‘all’ or ‘label’. The ‘all’ option produces a sort similar to that in the software STRUCTURE. All clusters are taken into account to sort individuals. When using the name of a cluster, like ‘Cluster1’, ‘Cluster2’ etc, all individuals are sorted by value of the specified cluster.
 #clustercol. Each cluster gets a distinct colour. You can use clustercol to set up the color. You can check the website to choose the color. 
@@ -50,5 +52,7 @@ labels_final<-read.csv('meanQ5_re_order.csv',stringsAsFactors = F)
 sapply(labels_final, is.character)
 g_labels_final<-labels_final[,8,drop=FALSE]
 
+Finally, plot the figure again, this time adding the g_labels_final as the group order with the 'grplab =' command
+plotQ(pop_k_5_reorder[1], grplab = g_labels_final, sortind='all', clustercol=c("coral","steelblue","lightblue","purple","orange"), imgtype = 'pdf')
 
 
