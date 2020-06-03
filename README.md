@@ -45,7 +45,7 @@ barcodes_plink_order.txt
 
 *These next files are so you can run through an example of how to create a plot with pophelper
 
-pophelper_rice_example.R     # sample R code for making a plot with pophelper. requires the next 3 files as input
+pophelper_rice_example.R     ### sample R code for making a plot with pophelper. requires the next 3 files as input
 
 meanQ_5.csv
 
@@ -53,6 +53,6 @@ meanQ_5_original_order.csv
 
 meanQ5_re_order.csv
 
-meanQ_5.pdf   # example of what an output plot looks like
+meanQ_5.pdf   ### example of what an output plot looks like
 
-Populations.csv  # another example of a possible input file
+Populations.csv  ### another example of a possible input file
