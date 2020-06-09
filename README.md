@@ -1,7 +1,7 @@
 # fastStructure
 A collection of files for running fastStructure on population genetic data.
 
-# Instructions:
+## Instructions:
 
 First, you will need a filtered vcf file.
 
@@ -31,7 +31,7 @@ barcodes_plink_order.txt
 Pophelper is the package to plot the result of the fastSTRUCTURE. The input file is the meanQ file from fastSTRUCTURE. The individual information and group information are also important. 
 
 
-# Files in this repository:
+## Files in this repository:
 
 *These first 4 files are for running fastStructure
 
